@@ -6,7 +6,6 @@ from . import html
 # from pdb import set_trace as st
 import matplotlib.pyplot as plt
 import math
-# from IPython import embed
 
 def zoom_to_res(img,res=256,order=0,axis=0):
     # img   3xXxX
@@ -97,7 +96,6 @@ class Visualizer():
         self.plot_data['X'].append(epoch + counter_ratio)
         self.plot_data['Y'].append([errors[k] for k in self.plot_data['legend']])
 
-        # embed()
         if(keys=='+ALL'):
             plot_keys = self.plot_data['legend']
         else:
@@ -167,7 +165,6 @@ class Visualizer():
             # txts.append(name)
             txts.append(txt)
             links.append(os.path.join(webpage.img_subdir,image_name))
-        # embed()
         webpage.add_images(ims, txts, links, width=self.win_size)
 
     # save image to the disk

@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 import os.path
 import torchvision.transforms as transforms
 from data.dataset.base_dataset import BaseDataset
@@ -5,7 +7,6 @@ from data.image_folder import make_dataset
 from PIL import Image
 import numpy as np
 import torch
-from IPython import embed
 
 class JNDDataset(BaseDataset):
     def initialize(self, dataroot, load_size=64):

@@ -1,21 +1,20 @@
-
 from __future__ import absolute_import
 
-import sys
-import scipy
-import scipy.misc
+import matplotlib.pyplot as plt
+import models
 import numpy as np
+import skimage
+import sys
 import torch
 from torch.autograd import Variable
-import models
 
 use_gpu = True
 
 ref_path  = './imgs/ex_ref.png'
 pred_path = './imgs/ex_p1.png'
 
-ref_img = scipy.misc.imread(ref_path).transpose(2, 0, 1) / 255.
-pred_img = scipy.misc.imread(pred_path).transpose(2, 0, 1) / 255.
+ref_img = skimage.io.imread(ref_path).transpose(2, 0, 1) / 255.
+pred_img = skimage.io.imread(pred_path).transpose(2, 0, 1) / 255.
 
 # Torchify
 ref = Variable(torch.FloatTensor(ref_img)[None,:,:,:])
@@ -24,7 +23,6 @@ pred = Variable(torch.FloatTensor(pred_img)[None,:,:,:], requires_grad=True)
 loss_fn = models.PerceptualLoss(model='net-lin', net='vgg', use_gpu=use_gpu)
 optimizer = torch.optim.Adam([pred,], lr=1e-3, betas=(0.9, 0.999))
 
-import matplotlib.pyplot as plt
 plt.ion()
 fig = plt.figure(1)
 ax = fig.add_subplot(131)

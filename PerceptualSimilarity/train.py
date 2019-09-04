@@ -8,7 +8,6 @@ from models import dist_model as dm
 from data import data_loader as dl
 import argparse
 from util.visualizer import Visualizer
-from IPython import embed
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--datasets', type=str, nargs='+', default=['train/traditional','train/cnn','train/mix'], help='datasets to train on: [train/traditional],[train/cnn],[train/mix],[val/traditional],[val/cnn],[val/color],[val/deblur],[val/frameinterp],[val/superres]')
