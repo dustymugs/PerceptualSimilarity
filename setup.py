@@ -5,6 +5,12 @@ with open("README.md", "r") as fh:
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
+test_requires = [
+]
+
+dev_requires = [
+]
+
 setuptools.setup(
     name="PerceptualSimilarity",
     version="0.0.1",
@@ -13,7 +19,7 @@ setuptools.setup(
     description="perceptual similarity metric as a python module",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/janesjanes/PerceptualSimilarity",
+    url="https://github.com/dustymugs/PerceptualSimilarity",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -21,5 +27,8 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=requirements,
-
+    extras_require={
+        'test': test_requires,
+        'dev': test_requires + dev_requires
+    }
 )

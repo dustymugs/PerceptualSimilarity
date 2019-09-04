@@ -2,7 +2,6 @@ import torch
 from util import util
 import models
 from models import dist_model as dm
-from IPython import embed
 
 use_gpu = False         # Whether to use GPU
 spatial = True         # Return a spatial map of perceptual distance.
