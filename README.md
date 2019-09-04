@@ -1,6 +1,6 @@
 # Purpose
 
-To package PerceptualSimilarity for easy consumption via `pip`:
+Forked to provide a package PerceptualSimilarity for easy consumption via `pip`:
 
 ```
 pip install https://github.com/dustymugs/PerceptualSimilarity.git
