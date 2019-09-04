@@ -1,15 +1,17 @@
-import torch.utils.data
-from data.base_data_loader import BaseDataLoader
+from __future__ import absolute_import
+
 import os
+import torch.utils.data
+
+from . import dataset as dsm
+from .base_data_loader import BaseDataLoader
 
 def CreateDataset(dataroots,dataset_mode='2afc',load_size=64,):
     dataset = None
     if dataset_mode=='2afc': # human judgements
-        from dataset.twoafc_dataset import TwoAFCDataset
-        dataset = TwoAFCDataset()
+        dataset = dsm.TwoAFCDataset()
     elif dataset_mode=='jnd': # human judgements
-        from dataset.jnd_dataset import JNDDataset
-        dataset = JNDDataset()
+        dataset = dsm.JNDDataset()
     else:
         raise ValueError("Dataset Mode [%s] not recognized."%self.dataset_mode)
 

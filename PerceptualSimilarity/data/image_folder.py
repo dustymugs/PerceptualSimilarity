@@ -5,6 +5,8 @@
 # directory as well as the subdirectories
 ################################################################################
 
+from __future__ import absolute_import
+
 import torch.utils.data as data
 
 from PIL import Image
@@ -29,9 +31,9 @@ def make_dataset(dirs, mode='img'):
         dirs = [dirs,]
 
     images = []
-    for dir in dirs:
-        assert os.path.isdir(dir), '%s is not a valid directory' % dir
-        for root, _, fnames in sorted(os.walk(dir)):
+    for dir_ in dirs:
+        assert os.path.isdir(dir), '{} is not a valid directory'.format(dir_)
+        for root, _, fnames in sorted(os.walk(dir_)):
             for fname in fnames:
                 if is_image_file(fname, mode=mode):
                     path = os.path.join(root, fname)

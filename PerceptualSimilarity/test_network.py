@@ -27,9 +27,9 @@ if(use_gpu):
 dist = model.forward(dummy_im0,dummy_im1)
 
 ## Example usage with images
-ex_ref = util.im2tensor(util.load_image('./imgs/ex_ref.png'))
-ex_p0 = util.im2tensor(util.load_image('./imgs/ex_p0.png'))
-ex_p1 = util.im2tensor(util.load_image('./imgs/ex_p1.png'))
+ex_ref = models.utils.im2tensor(util.load_image('./imgs/ex_ref.png'))
+ex_p0 = models.utils.im2tensor(util.load_image('./imgs/ex_p0.png'))
+ex_p1 = models.utils.im2tensor(util.load_image('./imgs/ex_p1.png'))
 if(use_gpu):
 	ex_ref = ex_ref.cuda()
 	ex_p0 = ex_p0.cuda()

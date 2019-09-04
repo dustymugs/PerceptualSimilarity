@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 import os.path
 import torchvision.transforms as transforms
 from data.dataset.base_dataset import BaseDataset

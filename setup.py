@@ -9,6 +9,7 @@ test_requires = [
 ]
 
 dev_requires = [
+    'flake8'
 ]
 
 setuptools.setup(

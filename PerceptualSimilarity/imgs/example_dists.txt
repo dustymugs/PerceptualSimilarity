@@ -1,0 +1,1 @@
+(ex_p0.png, ex_p1.png): 0.720(ex_p0.png, ex_ref.png): 0.722(ex_p1.png, ex_ref.png): 0.138Mean: 0.526

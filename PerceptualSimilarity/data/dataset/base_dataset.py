@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 import torch.utils.data as data
 
 class BaseDataset(data.Dataset):
