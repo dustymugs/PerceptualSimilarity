@@ -1,3 +1,17 @@
+# Purpose
+
+To package PerceptualSimilarity for easy consumption via `pip`:
+
+```
+pip install https://github.com/dustymugs/PerceptualSimilarity.git
+```
+
+In a `requirements.txt`:
+
+```
+git+https://github.com/dustymugs/PerceptualSimilarity.git
+```
+
 
 ## Perceptual Similarity Metric and Dataset [[Project Page]](http://richzhang.github.io/PerceptualSimilarity/)
 
